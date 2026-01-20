@@ -13,6 +13,7 @@ screen_y = Window.GetY();
 # State 3 : The Normal Evil Corp logo (70 Frames)
 # One Frame is visible for one 50th of a second, at minimum
 time = 0;
+runOnce = true;
 
 # Importing images
 logo.e = Image("glitch0.png");
@@ -45,6 +46,7 @@ fun refreshHandler() {
   if (time < 160){
     time = time + 1;
   }
+  else if(runOnce){}
   else {
     time = 0;
   }
